@@ -6,4 +6,14 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
+
+  --dark-purple: hsl(240, 25%, 21%);
+  --violet: hsl(240, 25%, 64%);
+  --dark-violet: hsl(259, 52%, 48%);
+  --dark-pink: hsl(292, 100%, 35%);
+  --blueish-green: hsl(194, 100%, 35%);
+  --green: hsl(177, 90%, 27%);
+  --yellow: hsl(47, 100%, 35%);
+
+  --white: hsl(240, 9%, 89%);
 }
