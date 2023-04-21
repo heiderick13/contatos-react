@@ -9,7 +9,7 @@ import { MdDeleteOutline } from "react-icons/md";
 function App() {
   return (
     <>
-      <header>
+      <header className="flex">
         <div className="head flex">
           <div className="head-title">
             <h1>Meus contatos</h1>
@@ -20,6 +20,12 @@ function App() {
             <MdDeleteOutline />
           </div>
         </div>
+        <form>
+          <input
+            type="text"
+            placeholder="Pesquise por nome ou dados de contato"
+          />
+        </form>
       </header>
     </>
   );

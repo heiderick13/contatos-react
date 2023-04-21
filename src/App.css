@@ -1,6 +1,7 @@
 header {
   background-color: var(--darker-purple);
   border-radius: 0.8rem;
+  flex-direction: column;
 }
 
 .head {
@@ -15,4 +16,20 @@ header {
 .head-icons {
   font-size: 2.5rem;
   gap: 1rem;
+}
+
+form {
+  width: 100%;
+  align-self: center;
+
+  padding: 1.5rem;
+}
+
+form input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: var(--dark-purple);
+  padding: 1rem;
+  border-radius: 0.8rem;
 }
