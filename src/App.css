@@ -2,15 +2,17 @@ header {
   background-color: var(--darker-purple);
   border-radius: 0.8rem;
   flex-direction: column;
+
+  padding: 4rem 3rem;
 }
 
 .head {
-  padding: 4rem;
-
   justify-content: space-between;
   align-items: baseline;
 
   font-size: 1.6rem;
+
+  margin-bottom: 3rem;
 }
 
 .head-icons {
@@ -21,8 +23,6 @@ header {
 form {
   width: 100%;
   align-self: center;
-
-  padding: 1.5rem;
 }
 
 form input {
