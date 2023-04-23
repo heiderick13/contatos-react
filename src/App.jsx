@@ -15,9 +15,9 @@ function App() {
             <h1>Meus contatos</h1>
           </div>
           <div className="head-icons flex">
-            <MdOutlineSearch style={{ cursor: "pointer" }} />
+            {/* <MdOutlineSearch style={{ cursor: "pointer" }} /> */}
             <MdAdd style={{ cursor: "pointer" }} />
-            <MdDeleteOutline style={{ cursor: "pointer" }} />
+            {/* <MdDeleteOutline style={{ cursor: "pointer" }} /> */}
           </div>
         </div>
         <form>
