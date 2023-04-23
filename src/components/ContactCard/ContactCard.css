@@ -1,0 +1,22 @@
+.contact {
+  align-items: center;
+  gap: 4rem;
+
+  font-size: 1.8rem;
+}
+
+.fake-img {
+  background-color: var(--dark-pink);
+  padding: 2rem;
+  text-transform: uppercase;
+
+  clip-path: circle();
+}
+
+.name {
+  font-size: 2rem;
+}
+
+.number {
+  opacity: 0.5;
+}

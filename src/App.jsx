@@ -6,6 +6,8 @@ import { MdOutlineSearch } from "react-icons/md";
 import { MdAdd } from "react-icons/md";
 import { MdDeleteOutline } from "react-icons/md";
 
+import ContactCard from "./components/ContactCard/ContactCard";
+
 function App() {
   return (
     <>
@@ -27,6 +29,9 @@ function App() {
           />
         </form>
       </header>
+      <div className="contacts-container flex">
+        <ContactCard />
+      </div>
     </>
   );
 }
