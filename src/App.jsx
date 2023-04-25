@@ -7,8 +7,15 @@ import { MdAdd } from "react-icons/md";
 import { MdDeleteOutline } from "react-icons/md";
 
 import ContactCard from "./components/ContactCard/ContactCard";
+import AddContactContainer from "./components/AddContactContainer/AddContactContainer";
 
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
   return (
     <>
       <header className="flex">
@@ -18,7 +25,7 @@ function App() {
           </div>
           <div className="head-icons flex">
             {/* <MdOutlineSearch style={{ cursor: "pointer" }} /> */}
-            <MdAdd style={{ cursor: "pointer" }} />
+            <MdAdd onClick={toggleModal} style={{ cursor: "pointer" }} />
             {/* <MdDeleteOutline style={{ cursor: "pointer" }} /> */}
           </div>
         </div>
@@ -32,6 +39,7 @@ function App() {
       <div className="contacts-container flex">
         <ContactCard />
       </div>
+      {isModalOpen && <AddContactContainer toggleModal={toggleModal} />}
     </>
   );
 }

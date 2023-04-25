@@ -20,6 +20,11 @@
   padding: 2rem;
 }
 
+.add-contact__header {
+  align-items: baseline;
+  justify-content: space-between;
+}
+
 .add-contact__title {
   padding-bottom: 2rem;
 }
