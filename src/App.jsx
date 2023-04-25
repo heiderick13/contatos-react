@@ -37,6 +37,15 @@ function App() {
     });
   };
 
+  useEffect(() => {
+    const savedContacts = JSON.parse(localStorage.getItem("localContacts"));
+    if (savedContacts) setContacts(savedContacts);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("localContacts", JSON.stringify(contacts));
+  }, [contacts]);
+
   return (
     <>
       <header className="flex">
