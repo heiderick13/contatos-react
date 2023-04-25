@@ -8,14 +8,17 @@
 }
 
 .fake-img {
-  background-color: var(--dark-pink);
+  background-color: var(--green);
+
   padding: 2rem;
+
   text-transform: uppercase;
 
   clip-path: circle();
 }
 
 .name {
+  text-transform: capitalize;
   font-size: 2rem;
 }
 
