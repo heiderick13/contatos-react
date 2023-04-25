@@ -11,9 +11,30 @@ import AddContactContainer from "./components/AddContactContainer/AddContactCont
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [contacts, setContacts] = useState([]);
+
+  const generateId = () => {
+    return Date.now();
+  };
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
+  };
+
+  const handleAddContact = (e, name, phoneNumber) => {
+    e.preventDefault();
+
+    if (name === "" || phoneNumber === "") return;
+
+    const newContact = {
+      id: generateId(),
+      name,
+      phoneNumber,
+    };
+
+    setContacts((prev) => {
+      return [...prev, newContact];
+    });
   };
 
   return (
@@ -37,9 +58,22 @@ function App() {
         </form>
       </header>
       <div className="contacts-container flex">
-        <ContactCard />
+        {contacts.map((contact) => {
+          return (
+            <ContactCard
+              key={contact.id}
+              name={contact.name}
+              phoneNumber={contact.phoneNumber}
+            />
+          );
+        })}
       </div>
-      {isModalOpen && <AddContactContainer toggleModal={toggleModal} />}
+      {isModalOpen && (
+        <AddContactContainer
+          toggleModal={toggleModal}
+          handleAddContact={handleAddContact}
+        />
+      )}
     </>
   );
 }

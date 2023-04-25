@@ -1,11 +1,27 @@
 import "./AddContactContainer.css";
 
+import { useRef } from "react";
+
 import { MdAdd } from "react-icons/md";
 import { MdClose } from "react-icons/md";
 
-function AddContactContainer({ toggleModal }) {
+function AddContactContainer({ toggleModal, handleAddContact }) {
+  const newContactName = useRef();
+  const newContactNumber = useRef();
+
   const closeModal = () => {
     toggleModal();
+  };
+
+  const addNewContact = (e) => {
+    handleAddContact(
+      e,
+      newContactName.current.value,
+      newContactNumber.current.value
+    );
+
+    newContactName.current.value = "";
+    newContactNumber.current.value = "";
   };
 
   return (
@@ -18,9 +34,9 @@ function AddContactContainer({ toggleModal }) {
             style={{ cursor: "pointer", fontSize: "1.8rem" }}
           />
         </div>
-        <form className="flex">
-          <input name="name" type="text" placeholder="Name" />
-          <input type="tel" name="phone" placeholder="Phone-number" />
+        <form className="flex" onSubmit={addNewContact}>
+          <input ref={newContactName} type="text" placeholder="Name" />
+          <input ref={newContactNumber} type="tel" placeholder="Phone-number" />
           <button className="btn" type="submit">
             <MdAdd style={{ cursor: "pointer" }} />
           </button>

@@ -1,12 +1,12 @@
 import "./ContactCard.css";
 
-function ContactCard() {
+function ContactCard({ name, phoneNumber }) {
   return (
     <div className="contact flex">
       <div className="fake-img">m</div>
       <div className="info">
-        <p className="name">Marcelo Oliveira</p>
-        <p className="number">(21) 98080-1555</p>
+        <p className="name">{name}</p>
+        <p className="number">{phoneNumber}</p>
       </div>
     </div>
   );
