@@ -12,6 +12,7 @@ import AddContactContainer from "./components/AddContactContainer/AddContactCont
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [contacts, setContacts] = useState([]);
+  const [search, setSearch] = useState("");
 
   const generateId = () => {
     return Date.now();
@@ -62,20 +63,25 @@ function App() {
         <form>
           <input
             type="text"
-            placeholder="Pesquise por nome ou dados de contato"
+            placeholder="Pesquise por nome"
+            onChange={(e) => setSearch(e.target.value)}
           />
         </form>
       </header>
       <div className="contacts-container flex">
-        {contacts.map((contact) => {
-          return (
+        {contacts
+          .filter((contact) => {
+            return search.toLowerCase() === ""
+              ? contact
+              : contact.name.toLowerCase().includes(search);
+          })
+          .map((contact) => (
             <ContactCard
               key={contact.id}
               name={contact.name}
               phoneNumber={contact.phoneNumber}
             />
-          );
-        })}
+          ))}
       </div>
       {isModalOpen && (
         <AddContactContainer
