@@ -36,13 +36,23 @@ form input {
 
 .contacts-container {
   max-width: 95%;
-  max-height: 70vh;
+  max-height: 65vh;
   overflow-y: auto;
 
   flex-direction: column;
   align-items: center;
   gap: 2rem;
 
+  margin-top: 2rem;
   padding: 4rem;
   padding-right: 8rem;
+}
+
+.contacts-container::-webkit-scrollbar {
+  background: var(--dark-purple);
+}
+
+.contacts-container::-webkit-scrollbar-thumb {
+  background: var(--purple);
+  border-radius: 0.8rem;
 }

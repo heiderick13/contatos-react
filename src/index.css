@@ -8,8 +8,9 @@
   color: rgba(255, 255, 255, 0.87);
   background-color: var(--dark-purple);
 
-  --darker-purple: hsla(245, 18%, 10%, 1);
+  --purple: hsl(240, 31%, 38%);
   --dark-purple: hsl(240, 25%, 21%);
+  --darker-purple: hsla(245, 18%, 10%, 1);
   --violet: hsl(240, 25%, 64%);
   --dark-violet: hsl(259, 52%, 48%);
   --dark-pink: hsl(292, 100%, 35%);
