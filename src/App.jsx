@@ -75,6 +75,7 @@ function App() {
               ? contact
               : contact.name.toLowerCase().includes(search);
           })
+          .sort((a, b) => (a.name > b.name ? 1 : -1))
           .map((contact) => (
             <ContactCard
               key={contact.id}
